@@ -67,7 +67,7 @@ const { filename, autoWidth, bookType, bookTypeOptions, downloadLoading, tableDa
 
 const handleExportExcel = () => {
   state.downloadLoading = true
-  import('@/vendor/Export2Excel').then((excel) => {
+  import('@/plugins/Export2Excel').then((excel) => {
     const header = ['date', 'name', 'address']
     const data = state.tableData.map((item) => {
       const arr = []

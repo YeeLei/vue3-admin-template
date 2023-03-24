@@ -71,7 +71,7 @@ const { filename, autoWidth, bookType, bookTypeOptions, downloadLoading, tableDa
 const handleExportExcel = () => {
   if (state.multipleSelection.length) {
     state.downloadLoading = true
-    import('@/vendor/Export2Excel').then((excel) => {
+    import('@/plugins/Export2Excel').then((excel) => {
       const header = ['date', 'name', 'address']
       const data = state.multipleSelection.map((item) => {
         const arr = []

@@ -74,7 +74,7 @@ const { filename, autoWidth, bookType, bookTypeOptions, downloadLoading, tableDa
 
 const handleExportExcel = () => {
   state.downloadLoading = true
-  import('@/vendor/Export2Excel').then((excel) => {
+  import('@/plugins/Export2Excel').then((excel) => {
     const multiHeader = [['Date', 'Name Age', '', 'Address']]
     const header = ['', 'name', 'age', '']
     const merges = ['A1:A2', 'B1:C1', 'D1:D2']
